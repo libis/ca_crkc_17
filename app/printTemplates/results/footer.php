@@ -87,7 +87,7 @@
 <body>
 	<table class="footerText"><tr>
 <?php
-	print $vs_footer;
+	//print $vs_footer;
 ?>
 	</tr></table>
 </body>

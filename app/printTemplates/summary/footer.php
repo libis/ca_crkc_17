@@ -36,6 +36,7 @@
 	
 	if($this->request->config->get('summary_header_enabled')) {
 		$vs_footer = '<table class="footerText" style="width: 100%;"><tr>';
+        $vs_footer .= "<td class='footerText'  style='font-family: \"Sans Light\"; font-size: 12px; text-align: center;'>CRKC | Abdij van Park 7 | 3001 Heverlee | 016406073 | info@crkc.be</td>";
 		if($this->request->config->get('summary_show_identifier')) {
 			$vs_footer .= "<td class='footerText'  style='font-family: \"Sans Light\"; font-size: 12px; text-align: center;'>".$t_item->getLabelForDisplay()." (".$t_item->get($t_item->getProperty('ID_NUMBERING_ID_FIELD')).")</td>";
 		}

@@ -34,7 +34,7 @@
  
 	if($this->request->config->get('report_header_enabled')) {
 		switch($this->getVar('PDFRenderer')) {
-			case 'domPDF'
+            case 'domPDF':
 ?>
 <div id='header'>
 
@@ -81,7 +81,10 @@
 <?php
 	if(file_exists($this->getVar('base_path')."/local/pdf.css")){
 ?>
-		<link type="text/css" href="<?php print $this->getVar('base_path'); ?>/local/pdf.css" rel="stylesheet" />
+<!--		<link type="text/css" href="--><?php //print $this->getVar('base_path'); ?><!--/local/pdf.css" rel="stylesheet" />-->
+        <style>
+            <?php include $this->getVar('base_path')."/local/pdf.css"; ?>
+        </style>
 <?php	
 	} else {
 ?>
@@ -89,9 +92,10 @@
 <?php
 	}
 	if(file_exists($this->request->getThemeDirectoryPath()."/graphics/logos/".$this->request->config->get('report_img'))){
-		print '<img src="'.$this->request->getThemeDirectoryPath().'/graphics/logos/'.$this->request->config->get('report_img').'" class="headerImg"/>';
+        $header_image = file_get_contents($this->request->getThemeDirectoryPath().'/graphics/logos/'.$this->request->config->get('report_img'));
+        print '<img src="data:image/jpeg;base64,'.base64_encode($header_image).'" class="headerImg" >';
 	}
-	print "<div class='pagingText' id='pagingText' style='position: absolute; top: 0px; right: 0px;'> </div>";
+//	print "<div class='pagingText' id='pagingText' style='position: absolute; top: 0px; right: 0px;'> </div>";
 ?>
 
 	<script>

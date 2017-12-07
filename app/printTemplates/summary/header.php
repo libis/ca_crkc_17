@@ -34,7 +34,7 @@
  
 	if($this->request->config->get('summary_header_enabled')) {
 		switch($this->getVar('PDFRenderer')) {
-			case 'domPDF'
+            case 'domPDF':
 ?>
 <div id='header'>
 <?php
@@ -100,7 +100,7 @@
 				}
 			}
 	
-			document.getElementById('pagingText').innerHTML = 'page ' + vars.page; // + ' of ' + vars.topage
+			document.getElementById('pagingText').innerHTML = 'paged ' + vars.page+ ' of ' + vars.topage;
 		}
   		
 	</script>
