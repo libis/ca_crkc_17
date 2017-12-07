@@ -40,6 +40,8 @@
  * ----------------------------------------------------------------------
  */
 
+	require_once(__CA_APP_DIR__."/helpers/imageHelpers.php");
+ 
 	$t_display				= $this->getVar('t_display');
 	$va_display_list 		= $this->getVar('display_list');
 	$vo_result 				= $this->getVar('result');
@@ -74,18 +76,31 @@
 			<div class="row">
 			<table>
 			<tr>
-				<td>
-<?php 
-					if ($vs_path = $vo_result->getMediaPath('ca_object_representations.media', 'thumbnail')) {
-						print "<div class=\"imageTiny\"><img src='{$vs_path}'/></div>";
-					} else {
-?>
-						<div class="imageTinyPlaceholder">&nbsp;</div>
-<?php					
-					}	
-?>								
+                <td >
+                    <?php
+                    # Start: LIBIS
+                    require_once(__CA_MODELS_DIR__.'/ca_objects.php');
+                    $t_object = new ca_objects();
+                    $t_object->load($vn_object_id);
 
-				</td><td>
+                    $imagePids = getImagePids($t_object->get('imageUrl', array('returnAsArray' => true)));
+
+                    if (sizeof($imagePids) > 0)
+                        $vs_path = getImageThumbnailUrl($imagePids[0]);
+
+                    if ($vs_path) {
+                        #End LIBIS
+                        print "<div class='imageTiny'><img src='{$vs_path}'/></div>";
+                    } else {
+                        ?>
+                        <div class="imageTinyPlaceholder">&nbsp;</div>
+                        <?php
+                    }
+                    unset($vs_path);    #LIBIS
+                    ?>
+
+                </td>
+				<td>
 					<div class="metaBlock">
 <?php				
 					print "<div class='title'>".$vo_result->getWithTemplate('^ca_objects.preferred_labels.name')."</div>";
