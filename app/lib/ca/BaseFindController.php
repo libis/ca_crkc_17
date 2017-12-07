@@ -559,6 +559,8 @@
 					if($this->isQueuingServer($va_settings) === true){
 						$vs_header = $this->render("header.php");
 						$va_pdf_options = null;
+						$va_pdf_options['m_top'] = '30mm';
+						$va_pdf_options['m_bottom'] = '20mm';						
 						$this->queuingRequest($vs_content, $vs_header, $va_settings, $va_pdf_options);
 						header('Location: ' . $_SERVER['HTTP_REFERER']);
 					}
