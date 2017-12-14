@@ -20,7 +20,8 @@
 			<id>2</id>
 			<title>Entity creation by month this year</title>	
 			<comment></comment>	
-			<sql>SELECT year(FROM_UNIXTIME(cal.log_datetime)) AS year, monthname(FROM_UNIXTIME(cal.log_datetime)) as month, concat(count(DISTINCT logged_row_id)) as creation FROM `ca_change_log` cal where cal.logged_table_num=20 and changetype="I" and year(NOW()) = year(FROM_UNIXTIME(cal.log_datetime)) GROUP BY year,month ORDER BY year,month(FROM_UNIXTIME(cal.log_datetime))</sql>
+			<sql>SELECT year(FROM_UNIXTIME(cal.log_datetime)) AS year, 
+			monthname(FROM_UNIXTIME(cal.log_datetime)) as month, concat(count(DISTINCT logged_row_id)) as creation FROM `ca_change_log` cal where cal.logged_table_num=20 and changetype="I" and year(NOW()) = year(FROM_UNIXTIME(cal.log_datetime)) GROUP BY year,month ORDER BY year,month(FROM_UNIXTIME(cal.log_datetime))</sql>
 			<columns>year,month,creation</columns>
 			<total_columns>creation</total_columns>			
 			<charting>column</charting>
@@ -30,17 +31,38 @@
 			<id>3</id>
 			<title>Entity creation by month last year</title>	
 			<comment></comment>	
-			<sql>SELECT year(FROM_UNIXTIME(cal.log_datetime)) AS year, monthname(FROM_UNIXTIME(cal.log_datetime)) as month, concat(count(DISTINCT logged_row_id)) as creation FROM `ca_change_log` cal where cal.logged_table_num=20 and changetype="I" and year(NOW()) - 1 = year(FROM_UNIXTIME(cal.log_datetime)) GROUP BY year,month ORDER BY year,month(FROM_UNIXTIME(cal.log_datetime))</sql>
+			<sql>SELECT year(FROM_UNIXTIME(cal.log_datetime)) AS year, monthname(FROM_UNIXTIME(cal.log_datetime)) as month, 
+			count(distinct cals.subject_row_id) as creation 
+			FROM ca_change_log_subjects cals, ca_change_log cal 
+			where cals.log_id = cal.log_id and
+			cal.logged_table_num = 25 and changetype="I" 
+		        and year(NOW()) - 1 = year(FROM_UNIXTIME(cal.log_datetime)) 
+			GROUP BY year,month ORDER BY year,month(FROM_UNIXTIME(cal.log_datetime))</sql>
 			<columns>year,month,creation</columns>
 			<total_columns>creation</total_columns>			
 			<charting>column</charting>
 			<charting_columns>month,creation</charting_columns>
 		</statistic>
+		<statistic>
+			<id>4</id>
+			<title>Entity creation by type last year</title>	
+			<comment></comment>	
+			<sql>SELECT ent.type_id entity_type, count(distinct cals.subject_row_id) as creation 
+			FROM ca_change_log_subjects cals, ca_change_log cal, ca_entities ent 
+			where cals.log_id = cal.log_id and cals.subject_row_id = ent.entity_id and  
+			cal.logged_table_num = 25 and changetype="I" 
+		        and year(NOW()) - 1 = year(FROM_UNIXTIME(cal.log_datetime)) 
+			GROUP BY ent.type_id</sql>
+			<columns>entity_type,creation</columns>
+			<total_columns>creation</total_columns>			
+			<charting>column</charting>
+			<charting_columns>entity_type,creation</charting_columns>
+		</statistic>
 	</statistics_group>
 	<statistics_group>
 		<title>Access and status</title>
 		<statistic>
-			<id>4</id>
+			<id>5</id>
 			<title>Entities by status</title>	
 			<comment></comment>	
 			<sql>SELECT ca_li.idno as Status, count(ca_e.entity_id) as Number FROM ca_entities ca_e LEFT JOIN ca_list_items ca_li ON ca_li.item_value = ca_e.status LEFT JOIN ca_lists ca_l ON ca_li.list_id=ca_l.list_id WHERE ca_l.list_code='workflow_statuses' and ca_li.item_value!="Root" and ca_e.deleted=0 group by ca_li.item_value</sql>
@@ -50,7 +72,7 @@
 			<charting_columns>Status,Number</charting_columns>
 		</statistic>
 		<statistic>
-			<id>5</id>
+			<id>6</id>
 			<title>Entities by access</title>	
 			<comment></comment>	
 			<sql>SELECT ca_li.idno as Access, count(ca_e.entity_id) as Number FROM ca_entities ca_e LEFT JOIN ca_list_items ca_li ON ca_li.item_value = ca_e.access LEFT JOIN ca_lists ca_l ON ca_li.list_id=ca_l.list_id WHERE ca_l.list_code='access_statuses' and ca_li.item_value!="Root" and ca_e.deleted=0 group by ca_li.item_value</sql>
@@ -63,7 +85,7 @@
 	<statistics_group>
 		<title>Deleted entities</title>
 		<statistic>
-			<id>6</id>
+			<id>7</id>
 			<title>Deleted entities</title>	
 			<comment></comment>	
 			<sql>SELECT IF(deleted>0,"yes","no") as "Deleted", count(entity_id) as Number FROM ca_entities GROUP BY deleted</sql>
