@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: CollectiveAccess Providence\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-04-27 14:04-0400\n"
-"PO-Revision-Date: 2017-04-27 14:04-0400\n"
+"PO-Revision-Date: 2018-01-04 11:45+0100\n"
 "Last-Translator: Seth <Seth@collectiveacess.org>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/"
 "collectiveaccess/collectiveaccess-providence/language/nl_NL/)\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.5\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-KeywordsList: _t;_p;_\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -517,7 +517,7 @@ msgstr "Zoek"
 #: app/conf/navigation.conf:2558 app/conf/navigation.conf:2624
 #: app/conf/navigation.conf:2918 app/conf/navigation.conf:2976
 msgid "Advanced search"
-msgstr ""
+msgstr "Geavanceerde zoekactie"
 
 #: app/controllers/find/SearchCollectionsController.php:112
 #: app/controllers/find/SearchEntitiesController.php:112
@@ -7639,7 +7639,7 @@ msgstr "Gebeurtenissen"
 #: app/conf/user_pref_defs.conf:613 app/conf/user_pref_defs.conf:683
 #: app/conf/user_pref_defs.conf:741 app/conf/user_pref_defs.conf:857
 msgid "Storage locations"
-msgstr "Opslagplaatsen"
+msgstr "Bewaarplaatsen"
 
 #: app/lib/ca/Search/QuickSearch.php:56 app/models/ca_set_items.php:73
 #: app/models/ca_sets.php:98 app/models/ca_user_sorts.php:67
@@ -11345,7 +11345,7 @@ msgstr "collecties"
 #: app/models/ca_search_forms.php:99 app/models/ca_storage_locations.php:45
 #: app/conf/browse.conf:192 app/conf/browse.conf:395
 msgid "storage locations"
-msgstr "opslagplaatsen"
+msgstr "bewaarplaatsen"
 
 #: app/lib/core/Plugins/InformationService/CollectiveAccess.php:65
 #: app/models/ca_bookmarks.php:72 app/models/ca_bundle_displays.php:92
@@ -14180,7 +14180,7 @@ msgstr "Gerelateerd lot"
 #: app/models/ca_occurrences.php:352 app/models/ca_places.php:364
 #: app/models/ca_storage_locations.php:349
 msgid "Related storage locations"
-msgstr "Gerelateerde opslaglocaties"
+msgstr "Gerelateerde bewaarplaatsen"
 
 #: app/models/ca_collections.php:374 app/models/ca_entities.php:360
 #: app/models/ca_list_items.php:567 app/models/ca_loans.php:348
@@ -14536,11 +14536,11 @@ msgstr ""
 
 #: app/models/ca_collections_x_storage_locations.php:40
 msgid "collection ⇔ storage location relationship"
-msgstr "collectie ⇔ opslaglocatie relatie"
+msgstr "collectie ⇔ bewaarplaatsen relatie"
 
 #: app/models/ca_collections_x_storage_locations.php:41
 msgid "collection ⇔ storage location relationships"
-msgstr "collectie ⇔ opslaglocatie relaties"
+msgstr "collectie ⇔ bewaarplaatsenrelaties"
 
 #: app/models/ca_collections_x_vocabulary_terms.php:40
 msgid "collection ⇔ vocabulary term relationship"
@@ -16742,7 +16742,7 @@ msgstr "[%1] Kon gerelateerde gebeurtenis met relatie %2 niet toevoegen"
 
 #: app/models/ca_data_importers.php:2698
 msgid "[%1] Could not add related storage location with relationship %2:"
-msgstr "[%1] Kon gerelateerde opslagplaats met relatie %2 niet toevoegen"
+msgstr "[%1] Kon gerelateerde bewaarplaats met relatie %2 niet toevoegen"
 
 #: app/models/ca_data_importers.php:2717
 msgid "[%1] Could not add related list item with relationship %2:"
@@ -18172,11 +18172,11 @@ msgstr "entiteit ⇔ plaats relaties"
 
 #: app/models/ca_entities_x_storage_locations.php:40
 msgid "entity ⇔ storage location relationship"
-msgstr "entiteit ⇔ opslaglocatie relatie"
+msgstr "entiteit ⇔ bewaarplaats relatie"
 
 #: app/models/ca_entities_x_storage_locations.php:41
 msgid "entity ⇔ storage location relationships"
-msgstr "entiteit ⇔ opslaglocatie relaties"
+msgstr "entiteit ⇔ bewaarplaats relaties"
 
 #: app/models/ca_entities_x_vocabulary_terms.php:40
 msgid "entity ⇔ vocabulary term relationship"
@@ -19050,11 +19050,11 @@ msgstr "bruiklenen ⇔ plaatsen relaties"
 
 #: app/models/ca_loans_x_storage_locations.php:40
 msgid "loans ⇔ storage locations relationship"
-msgstr "bruiklenen ⇔ opslaglocatie relatie"
+msgstr "bruiklenen ⇔ bewaarplaats relatie"
 
 #: app/models/ca_loans_x_storage_locations.php:41
 msgid "loans ⇔ storage locations relationships"
-msgstr "bruiklenen ⇔ opslaglocatie relaties"
+msgstr "bruiklenen ⇔ bewaarplaats relaties"
 
 #: app/models/ca_loans_x_vocabulary_terms.php:40
 msgid "loans ⇔ vocabulary terms relationship"
@@ -19557,11 +19557,11 @@ msgstr "verplaatsingen ⇔ plaatsen relaties"
 
 #: app/models/ca_movements_x_storage_locations.php:40
 msgid "movements ⇔ storage locations relationship"
-msgstr "verplaatsingen ⇔ opslaglocatie relatie"
+msgstr "verplaatsingen ⇔ bewaarplaats relatie"
 
 #: app/models/ca_movements_x_storage_locations.php:41
 msgid "movements ⇔ storage locations relationships"
-msgstr "verplaatsingen ⇔ opslaglocatie relaties"
+msgstr "verplaatsingen ⇔ bewaarplaats relaties"
 
 #: app/models/ca_movements_x_vocabulary_terms.php:40
 msgid "movements ⇔ vocabulary terms relationship"
@@ -19924,11 +19924,11 @@ msgstr "objectlot ⇔ plaats relaties"
 
 #: app/models/ca_object_lots_x_storage_locations.php:40
 msgid "object lot ⇔ storage location relationship"
-msgstr "objectlot ⇔ opslaglocatie relatie"
+msgstr "objectlot ⇔ bewaarplaats relatie"
 
 #: app/models/ca_object_lots_x_storage_locations.php:41
 msgid "object lot ⇔ storage location relationships"
-msgstr "objectlot ⇔ opslaglocatie relaties"
+msgstr "objectlot ⇔ bewaarplaats relaties"
 
 #: app/models/ca_object_lots_x_vocabulary_terms.php:40
 msgid "object lot ⇔ vocabulary term relationship"
@@ -20524,11 +20524,11 @@ msgstr "object ⇔ plaats relaties"
 
 #: app/models/ca_objects_x_storage_locations.php:41
 msgid "object ⇔ storage location relationship"
-msgstr "object ⇔ opslaglocatie relatie"
+msgstr "object ⇔ bewaarplaats relatie"
 
 #: app/models/ca_objects_x_storage_locations.php:42
 msgid "object ⇔ storage location relationships"
-msgstr "object ⇔ opslaglocatie relaties"
+msgstr "object ⇔ bewaarplaats relaties"
 
 #: app/models/ca_objects_x_vocabulary_terms.php:40
 msgid "object ⇔ vocabulary term relationship"
@@ -20624,11 +20624,11 @@ msgstr "gebeurtenis ⇔ gebeurtenis relaties"
 
 #: app/models/ca_occurrences_x_storage_locations.php:40
 msgid "occurrences ⇔ storage locations relationship"
-msgstr "gebeurtenissen ⇔ opslaglocaties relatie"
+msgstr "gebeurtenissen ⇔ bewaarplaats relatie"
 
 #: app/models/ca_occurrences_x_storage_locations.php:41
 msgid "occurrences ⇔ storage locations relationships"
-msgstr "gebeurtenissen ⇔ opslaglocaties relaties"
+msgstr "gebeurtenissen ⇔ bewaarplaats relaties"
 
 #: app/models/ca_occurrences_x_vocabulary_terms.php:40
 msgid "occurrence ⇔ vocabulary term relationship"
@@ -20758,11 +20758,11 @@ msgstr "plaats ⇔ plaats relaties"
 
 #: app/models/ca_places_x_storage_locations.php:40
 msgid "places ⇔ storage locations relationship"
-msgstr "plaatsen ⇔ opslaglocaties relatie"
+msgstr "plaatsen ⇔ bewaarplaats relatie"
 
 #: app/models/ca_places_x_storage_locations.php:41
 msgid "places ⇔ storage locations relationships"
-msgstr "plaatsen ⇔ opslaglocaties relaties"
+msgstr "plaatsen ⇔ bewaarplaats relaties"
 
 #: app/models/ca_places_x_vocabulary_terms.php:40
 msgid "place ⇔ vocabulary term relationship"
@@ -21550,20 +21550,20 @@ msgstr ""
 
 #: app/models/ca_storage_location_labels.php:40
 msgid "storage location name"
-msgstr "opslaglocatie naam"
+msgstr "bewaarplaats naam"
 
 #: app/models/ca_storage_location_labels.php:41
 msgid "storage location names"
-msgstr "opslaglocatie namen"
+msgstr "bewaarplaats namen"
 
 #: app/models/ca_storage_location_labels.php:79
 msgid "Name of storage location"
-msgstr "Naam van opslaglocatie"
+msgstr "Naam van bewaarplaats"
 
 #: app/models/ca_storage_locations.php:44 app/conf/browse.conf:191
 #: app/conf/browse.conf:394
 msgid "storage location"
-msgstr "opslagplaats"
+msgstr "bewaarplaats"
 
 #: app/models/ca_storage_locations.php:52
 msgid ""
@@ -21623,19 +21623,19 @@ msgstr ""
 
 #: app/models/ca_storage_locations_x_storage_locations.php:40
 msgid "storage locations ⇔ storage locations relationship"
-msgstr "opslaglocaties ⇔ opslaglocaties relatie"
+msgstr "bewaarplaatsen ⇔ bewaarplaatsen relatie"
 
 #: app/models/ca_storage_locations_x_storage_locations.php:41
 msgid "storage locations ⇔ storage locations relationships"
-msgstr "opslaglocaties ⇔ opslaglocaties relaties"
+msgstr "bewaarplaatsen ⇔ bewaarplaatsen relaties"
 
 #: app/models/ca_storage_locations_x_vocabulary_terms.php:40
 msgid "storage locations ⇔ vocabulary terms relationship"
-msgstr "opslaglocaties ⇔ woordenlijst term relatie"
+msgstr "bewaarplaatsen ⇔ woordenlijst term relatie"
 
 #: app/models/ca_storage_locations_x_vocabulary_terms.php:41
 msgid "storage locations ⇔ vocabulary terms relationships"
-msgstr "opslaglocaties ⇔ woordenlijst term relaties"
+msgstr "bewaarplaatsen ⇔ woordenlijst term relaties"
 
 #: app/models/ca_task_queue.php:39
 msgid "task queue entry"
@@ -24776,7 +24776,7 @@ msgstr ""
 
 #: app/refineries/storageLocationSplitter/storageLocationSplitterRefinery.php:147
 msgid "Storage location type"
-msgstr "Type opslagplaats"
+msgstr "Type bewaarplaats"
 
 #: app/refineries/storageLocationSplitter/storageLocationSplitterRefinery.php:148
 msgid ""
@@ -24803,7 +24803,7 @@ msgstr ""
 
 #: app/refineries/storageLocationSplitter/storageLocationSplitterRefinery.php:183
 msgid "Storage location type default"
-msgstr "Standaard type opslagplaats"
+msgstr "Standaard type bewaarplaats"
 
 #: app/refineries/storageLocationSplitter/storageLocationSplitterRefinery.php:184
 msgid ""
@@ -25189,7 +25189,7 @@ msgstr ""
 
 #: app/widgets/count/countWidget.php:196
 msgid "Show count for storage locations?"
-msgstr "Toon optelsom voor opslaglocaties?"
+msgstr "Toon optelsom voor bewaarplaatsen?"
 
 #: app/widgets/count/countWidget.php:197
 msgid ""
@@ -26009,7 +26009,7 @@ msgstr "Objectlot zoekacties"
 
 #: app/widgets/savedSearches/views/main_html.php:63
 msgid "Storage Location Searches"
-msgstr "Opslaglocatie zoekacties"
+msgstr "Bewaarplaatsen zoekacties"
 
 #: app/widgets/savedSearches/views/main_html.php:68
 msgid "Collection Searches"
@@ -26053,7 +26053,7 @@ msgstr "Objectlot sets"
 
 #: app/widgets/searchBySet/views/main_html.php:63
 msgid "Storage Location Sets"
-msgstr "Opslaglocatie sets"
+msgstr "Bewaarplaats sets"
 
 #: app/widgets/searchBySet/views/main_html.php:68
 msgid "Collection Sets"
@@ -29893,7 +29893,7 @@ msgstr "Object lots"
 
 #: themes/default/views/manage/saved_searches_list_html.php:89
 msgid "Storage Locations"
-msgstr "Opslagplaatsen"
+msgstr "Bewaarplaatsen"
 
 #: themes/default/views/manage/search_form_list_html.php:38
 msgid "New search form for "
@@ -30844,11 +30844,11 @@ msgstr ""
 
 #: app/conf/navigation.conf:672
 msgid "Storage location"
-msgstr ""
+msgstr "Bewaarplaats"
 
 #: app/conf/navigation.conf:682
 msgid "Storage location editor"
-msgstr ""
+msgstr "Bewaarplaats editor"
 
 #: app/conf/navigation.conf:752
 msgid "Loan"
@@ -30877,7 +30877,7 @@ msgstr ""
 
 #: app/conf/navigation.conf:2659
 msgid "QuickSearch"
-msgstr ""
+msgstr "Snel Zoeken"
 
 #: app/conf/navigation.conf:2670
 msgid "QuickSearch Results"
@@ -30893,7 +30893,7 @@ msgstr "Beheren"
 
 #: app/conf/navigation.conf:3048
 msgid "My preferences"
-msgstr ""
+msgstr "Mijn voorkeuren"
 
 #: app/conf/navigation.conf:3063 app/conf/user_pref_defs.conf:14
 msgid "Editing"
@@ -30929,15 +30929,15 @@ msgstr "Gebruikersprofiel"
 
 #: app/conf/navigation.conf:3329
 msgid "My watched items"
-msgstr ""
+msgstr "Mijn gevolgde items"
 
 #: app/conf/navigation.conf:3349
 msgid "My project teams"
-msgstr ""
+msgstr "Mijn projectteams"
 
 #: app/conf/navigation.conf:3356
 msgid "My displays"
-msgstr ""
+msgstr "Mijn weergaves"
 
 #: app/conf/navigation.conf:3366
 msgid "Edit display"
@@ -30945,7 +30945,7 @@ msgstr ""
 
 #: app/conf/navigation.conf:3398 app/conf/navigation.conf:3410
 msgid "My sets"
-msgstr ""
+msgstr "Mijn sets"
 
 #: app/conf/navigation.conf:3455
 msgid "Edit set"
@@ -30957,7 +30957,7 @@ msgstr ""
 
 #: app/conf/navigation.conf:3521
 msgid "My search tools"
-msgstr ""
+msgstr "Zoekmogelijkheden"
 
 #: app/conf/navigation.conf:3532
 msgid "Search forms"
@@ -30981,7 +30981,7 @@ msgstr ""
 
 #: app/conf/navigation.conf:3649
 msgid "Lists & vocabularies"
-msgstr ""
+msgstr "(Woorden)lijsten"
 
 #: app/conf/navigation.conf:3679
 msgid "Edit list"
@@ -31001,7 +31001,7 @@ msgstr ""
 
 #: app/conf/navigation.conf:3825
 msgid "Access control"
-msgstr ""
+msgstr "Toegangsregels"
 
 #: app/conf/navigation.conf:3832
 msgid "User logins"
@@ -31057,7 +31057,7 @@ msgstr ""
 
 #: app/conf/navigation.conf:4000
 msgid "Administration"
-msgstr ""
+msgstr "Systeembeheer"
 
 #: app/conf/navigation.conf:4013
 msgid "User interfaces"
@@ -32416,7 +32416,7 @@ msgstr ""
 
 #: app/conf/user_actions.conf:707
 msgid "Storage location authority editing"
-msgstr "Beheer opslaglocaties"
+msgstr "Beheer bewaarplaats"
 
 #: app/conf/user_actions.conf:708
 msgid "Actions allowing creation, editing and deletion of storage locations."
@@ -32429,7 +32429,7 @@ msgstr "Maak bewaarplaatsen aan"
 
 #: app/conf/user_actions.conf:712
 msgid "Allow user to create new storage locations"
-msgstr "Sta gebruiker toe om nieuwe opslaglocaties aan te maken"
+msgstr "Sta gebruiker toe om nieuwe bewaarplaatsen aan te maken"
 
 #: app/conf/user_actions.conf:715
 msgid "Edit storage locations"
@@ -32441,7 +32441,7 @@ msgstr "Sta gebruiker toe om bestaande opslaglocaties te bewerken"
 
 #: app/conf/user_actions.conf:719
 msgid "Delete storage locations"
-msgstr "Verwijder opslaglocaties"
+msgstr "Verwijder bewaarplaatsen"
 
 #: app/conf/user_actions.conf:720
 msgid "Allow user to delete storage locations"
@@ -32449,7 +32449,7 @@ msgstr "Sta gebruiker toe om opslaglocaties te verwijderen"
 
 #: app/conf/user_actions.conf:723
 msgid "Search storage locations"
-msgstr "Zoek opslagplaatsen"
+msgstr "Zoek bewaarplaatsen"
 
 #: app/conf/user_actions.conf:724
 msgid "Allow user to search storage locations"
@@ -32457,7 +32457,7 @@ msgstr "Sta gebruiker toe om opslaglocaties te zoeken"
 
 #: app/conf/user_actions.conf:727
 msgid "Browse storage locations"
-msgstr "Verken opslaglocaties"
+msgstr "Verken bewaarplaatsen"
 
 #: app/conf/user_actions.conf:728
 msgid "Allow user to browse storage locations"
@@ -32465,7 +32465,7 @@ msgstr "Sta gebruiker toe om opslaglocaties te verkennen"
 
 #: app/conf/user_actions.conf:731
 msgid "Duplicate storage locations"
-msgstr "Kopieer opslaglocaties"
+msgstr "Kopieer bewaarplaatsen"
 
 #: app/conf/user_actions.conf:732
 msgid "Allow user to duplicate storage locations"
@@ -32473,7 +32473,7 @@ msgstr "Sta gebruiker toe om opslaglocaties te kopiëren"
 
 #: app/conf/user_actions.conf:735
 msgid "Export storage locations"
-msgstr "Exporteer opslagplaatsen"
+msgstr "Exporteer bewaarplaatsen"
 
 #: app/conf/user_actions.conf:736
 msgid "Allow user to export storage locations"
@@ -32481,7 +32481,7 @@ msgstr "Sta gebruiker toe om opslagplaatsen te exporteren"
 
 #: app/conf/user_actions.conf:739
 msgid "Quick add storage locations"
-msgstr "Voeg snel opslagplaatsen toe"
+msgstr "Voeg snel bewaarplaatsen toe"
 
 #: app/conf/user_actions.conf:740
 msgid ""
@@ -32503,7 +32503,7 @@ msgstr ""
 
 #: app/conf/user_actions.conf:751
 msgid "Batch edit storage locations"
-msgstr "Opslagplaatsen in batch bewerken"
+msgstr "Bewaarplaatsen in batch bewerken"
 
 #: app/conf/user_actions.conf:752
 msgid "Allow user to edit batches of storage locations"
@@ -32511,7 +32511,7 @@ msgstr "Sta gebruiker toe om opslagplaatsen in batch te bewerken"
 
 #: app/conf/user_actions.conf:755
 msgid "Batch delete storage locations"
-msgstr ""
+msgstr "Batch delete bewaarplaatsen"
 
 #: app/conf/user_actions.conf:756
 msgid "Allow user to delete batches of storage locations"
@@ -33499,13 +33499,13 @@ msgstr ""
 #: app/conf/user_pref_defs.conf:288 app/conf/user_pref_defs.conf:461
 #: app/conf/user_pref_defs.conf:535
 msgid "Storage location editor user interface"
-msgstr "Gebruikersinterface opslagplaats-editor"
+msgstr "Gebruikersinterface bewaarplaats-editor"
 
 #: app/conf/user_pref_defs.conf:289 app/conf/user_pref_defs.conf:462
 msgid "Selects which user interface to use when editing storage locations."
 msgstr ""
 "Selecteert welke gebruikersinterface te gebruiken bij het bewerken van "
-"opslaglocaties."
+"bewaarplaatsen."
 
 #: app/conf/user_pref_defs.conf:295 app/conf/user_pref_defs.conf:468
 msgid "Object representation editor user interface"
@@ -33706,7 +33706,7 @@ msgstr ""
 msgid ""
 "Selects which user interface to use when quick-adding storage locations."
 msgstr ""
-"Bepaalt welke gebruikersinterface te gebruiken om snel opslagplaatsen toe te "
+"Bepaalt welke gebruikersinterface te gebruiken om snel bewaarplaatsen toe te "
 "voegen."
 
 #: app/conf/user_pref_defs.conf:546
