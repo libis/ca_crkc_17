@@ -1,5 +1,7 @@
 # *** use ONLY lowercase letters in lists: input will be forced to lowercase for comparison ***
 
+wordsWithSpaces = [na Chr.,na Christus,n. Chr,n. Chr.,n Chr, na chr, n chr, n. chr.,v. Chr.,voor Chr., voor Chr,v. Chr,v Chr,voor Christus]
+wordsWithSpacesReplacements = [ncr,ncr,ncr,ncr,ncr,ncr,ncr,ncr,vcr,vcr,vcr,vcr,vcr,vcr]
 # List month names; used whenever name of month needs to be displayed
 monthList = [januari, februari, maart, april, mei, juni, juli, augustus, september, oktober, november, december]
 
@@ -26,7 +28,7 @@ monthTable = {
 dayListDisplay = [zondag, maandag, dinsdag, woensdag, donderdag, vrijdag, zaterdag]
 
 rangePreConjunctions = [van, vanaf, tussen]
-rangeConjunctions = [tot, -, en, .., tem, t.e.m]
+rangeConjunctions = [tot, -, en, .., tem, t.e.m, -tot]
 
 dateTimeConjunctions = [om,@]
 
@@ -41,31 +43,31 @@ meridianTable = {
 	p.m. = pm
 }
 
-dateCircaIndicator = [circa, c, c., ca, ca.]
-dateUncertaintyIndicator = [~]
+dateCircaIndicator = [circa, Circa, c, c., ca, ca., Ca., mogelijk, ongeveer, onzeker, vermoedelijk, (vermoedelijk), rond, Rond, omstreeks]
+dateUncertaintyIndicator = [~, ?, ??, ???, ????]
 dateUncertaintyYearIndicator = [y]
 dateUncertaintyDayIndicator = [d]
 
 # What to use to indicate a geological date ("millions of years ago")
 dateMYA = [mya]
 
-dateADIndicator = ad
-dateBCIndicator = bc
+dateADIndicator = ncr
+dateBCIndicator = vcr
 ADBCTable = {
-	a.d. = ad, n.Chr. = ad, na Chr. = ad, na Christus = ad, nc = ad,
-	b.c. = bc, v.Chr. = bc, voor Christus = bc, vc = bc 
+	a.d. = ad, n.Chr. = ncr, na Chr. = ncr, na Christus = ncr, nc = ncr,n. Chr = ncr, n. Chr. = ncr, n Chr = ncr, n.Chr = ncr,
+	b.c. = vcr, v.Chr. = vcr, v. Chr. = vcr, voor Chr. = vcr, voor Chr = vcr, v.Chr = vcr, v. Chr = vcr, vChr = vcr, v Chr = vcr, voor Christus = vcr, vc = vcr
 }
 
 nowDate = [nu]
 todayDate = [vandaag]
 yesterdayDate = [gisteren]
 tomorrowDate = [morgen]
-undatedDate = [undated, unknown]
+undatedDate = [undated, unknown, onbekend, sd, s.d.]
 
 presentDate = [heden, ?, ??, ???, ????]
-beforeQualifier = [voor]
+beforeQualifier = [voor, <, Voor, tot]
 diedQualifier = [died, d, d.]
-afterQualifier = [na]
+afterQualifier = [na, >, Na]
 bornQualifier = [born, b, b.]
 
 # Text to indicate century (as in "20th century")
