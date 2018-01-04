@@ -79,7 +79,7 @@
             <charting_columns>month,operation</charting_columns>
         </statistic>
         <statistic>
-            <id>24</id>
+            <id>17</id>
             <title>Number of Objects created in 2017</title>
             <comment></comment>
             <sql>SELECT count(distinct ccls.subject_row_id) as numberofobjects
