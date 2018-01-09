@@ -915,8 +915,8 @@ require_once(__CA_LIB_DIR__.'/core/Parsers/DisplayTemplateParser.php');
                     foreach ($imagePids as $imagePid) {
                         $imageThumbnail = getImageThumbnailUrl($imagePid);
                         $imageFull = getImageViewMainUrl($imagePid) . '" target="_blank';
-                        //array_push($va_imgs, "{url:'".$imageThumbnail."', height:'250px', width: '170px', link: '" . $imageFull . "'}");
-                        array_push($va_imgs, "{url:'".$imageThumbnail."', height:'auto', width: 'auto', link: '" . $imageFull . "'}");
+                        array_push($va_imgs, "{url:'".$imageThumbnail."', height:'250px', width: '170px', link: '" . $imageFull . "'}");
+                        //array_push($va_imgs, "{url:'".$imageThumbnail."', height:'auto', width: 'auto', link: '" . $imageFull . "'}");
                     }
                 }elseif(!empty($va_reps)){   #show image representation if image image does not exist
 				foreach($va_reps as $va_rep) {
