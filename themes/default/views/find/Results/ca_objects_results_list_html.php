@@ -25,6 +25,8 @@
  *
  * ----------------------------------------------------------------------
  */
+    set_time_limit(600000);
+    require_once(__CA_APP_DIR__."/helpers/imageHelpers.php");
 
 	$t_display				= $this->getVar('t_display');
 	$va_display_list 		= $this->getVar('display_list');
@@ -39,14 +41,17 @@
 ?>
 <div id="scrollingResults">
 	<form id="caFindResultsForm">
-		<table class="listtable">
+		<table class="listtable" width="100%" border="0" cellpadding="0" cellspacing="1">
 			<thead>
 			<tr>
-			<th class='list-header-nosort addItemToSetControl'>
+			<th style="width:10px; text-align:center;" class='list-header-nosort addItemToSetControl'>
 				<input type='checkbox' name='record' value='' id='addItemToSetSelectAllControl' class='addItemToSetControl' onchange="jQuery('.addItemToSetControl').attr('checked', (jQuery('#addItemToSetSelectAllControl').attr('checked') == 'checked'));"/>
 			</th>
 			<th class='list-header-nosort'>
 				<?php print ($vs_default_action	== "Edit" ? _t("Edit") : _t("View")); ?>
+			</th>
+            <th class='imageurl'>
+                Afbeelding
 			</th>
 <?php
 			// output headers
@@ -91,13 +96,26 @@
 				($i == 2) ? $i = 0 : "";
 ?>
 				<tr <?php print ($i ==1) ? "class='odd'" : ""; ?>>
-					<td class="addItemToSetControl">
+					<td style="width:10px" class="addItemToSetControl">
 						<input type='checkbox' name='add_to_set_ids' value='<?php print (int)$vn_object_id; ?>' class="addItemToSetControl" />
 						<div><?php print $vn_start + $vn_item_count + 1; ?></div>
 					</td>
 <?php
 					print "<td style='width:5%;'>".caEditorLink($this->request, caNavIcon(__CA_NAV_ICON_EDIT__, 2), '', 'ca_objects', $vn_object_id, array(), array())."</td>";
 						
+                    // libis_start
+                    require_once(__CA_MODELS_DIR__.'/ca_objects.php');
+                    $t_object = new ca_objects();
+                    $t_object->load($vn_object_id);
+                    $imagePids = getImagePids($t_object->get('imageUrl', array('returnAsArray' => true)));
+
+                    if (sizeof($imagePids) > 0) {
+                        $media_representation .= getImageThumbnailLink($imagePids[0]);
+                        print "<td>" . $media_representation . "</td>";
+                    } else {
+                        print "<td>&nbsp;</td>";
+                    }
+                    // libis_end
 					foreach($va_display_list as $vn_placement_id => $va_info) {
                         print "<td><span class=\"read-more\">".$t_display->getDisplayValue($vo_result, $vn_placement_id, array_merge(array('request' => $this->request), is_array($va_info['settings']) ? $va_info['settings'] : array()))."</span></td>";
                     }
@@ -106,6 +124,7 @@
 <?php
 				$i++;
 				$vn_item_count++;
+                $media_representation = "";
 			}
 ?>
 			</tbody>
