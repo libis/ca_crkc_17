@@ -258,7 +258,7 @@
 									var mID_{n} = ".$pa_element_info['element_id'].";
 									var imagedata = {
 										imageContainer : jQuery('#imageContainer_' + mID_{n} + '_{n}'),
-										imagePID : \"{{{".$pa_element_info['element_id']."}}}\",
+										imagePID :'{{{$pa_element_info['element_id']}}}',
 										defaultSearchText : '"._t('PID van het originele item') ."',
 										processIndicator : '". __CA_URL_ROOT__ ."/themes/default/graphics/icons/indicator.gif',
 										lookupUrl	: '". __CA_URL_ROOT__ ."/index.php/lookup/Image/Get'
