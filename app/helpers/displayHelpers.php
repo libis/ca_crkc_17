@@ -934,15 +934,22 @@ require_once(__CA_LIB_DIR__.'/core/Parsers/DisplayTemplateParser.php');
 				}
 
 
-					if (sizeof($va_reps) > 1) {
+					/*if (sizeof($va_reps) > 1) {
 						$vs_buf .= "
 					<div class='leftScroll'>
 						<a href='#' onclick='inspectorInfoRepScroller.scrollToPreviousImage(); return false;'>".caNavIcon(__CA_NAV_ICON_SCROLL_LT__, '16px')."</a>
 					</div>
 		";
-					}
+					}*/
 
                 }
+                                        if (sizeof($va_reps) > 1 || sizeof($imagePids) > 1) {
+                                                $vs_buf .= "
+                                        <div class='leftScroll'>
+                                                <a href='#' onclick='inspectorInfoRepScroller.scrollToPreviousImage(); return false;'>".caNavIcon(__CA_NAV_ICON_SCROLL_LT__, '16px')."</a>
+                                        </div>
+                ";
+                                        }
                 //libis_end
 									
 				if (sizeof($va_imgs) > 0) {
