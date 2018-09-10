@@ -90,7 +90,7 @@
 
                     if ($vs_path) {
                         #End LIBIS
-                        print "<div class='imageTiny'><img src='{$vs_path}'/></div>";
+                        print "<div class='imageTiny'><img style='max-height: 600px; page-break-inside: avoid' src='{$vs_path}'/></div>";
                     } else {
                         ?>
                         <div class="imageTinyPlaceholder">&nbsp;</div>

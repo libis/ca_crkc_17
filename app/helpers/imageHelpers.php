@@ -57,7 +57,7 @@
 			while($try < 10)
 			{
 				if (!$vo_http_response->isError()){
-					return '<img src="data:image/jpeg;base64,'.base64_encode($thumb).'">';
+					return '<img style="max-height: 600px; page-break-inside: avoid" src="data:image/jpeg;base64,'.base64_encode($thumb).'">';
 					break;
 				} else {
                    //retry
@@ -66,7 +66,7 @@
                    $vo_http_response = $vo_http_client->request();
 
                    if (!$vo_http_response->isError()){
-                        return '<img src="data:image/jpeg;base64,'.base64_encode($thumb).'">';
+                        return '<img style="max-height: 600px; page-break-inside: avoid" src="data:image/jpeg;base64,'.base64_encode($thumb).'">';
                    } else {
                        $try++;
                     }
