@@ -100,7 +100,7 @@
 				}
 			}
 	
-			document.getElementById('pagingText').innerHTML = 'paged ' + vars.page+ ' of ' + vars.topage;
+			document.getElementById('pagingText').innerHTML = 'page ' + vars.page+ ' of ' + vars.topage;
 		}
   		
 	</script>
