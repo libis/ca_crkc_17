@@ -62,6 +62,9 @@
 			$vs_display_value = "&lt;"._t('not defined')."&gt;";
 		} 
 		
+		if(strlen($vs_display_value) > 100)
+	            $vs_display_value = "<br>".$vs_display_value;
+
 		print '<div class="data"><span class="label">'."{$va_bundle_info['display']} </span><span> {$vs_display_value}</span></div>\n";
 	}
 
