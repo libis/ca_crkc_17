@@ -9,16 +9,18 @@ img.headerImg {height: 60px}
 
 table.footerText { width: 100%; }
 td.footerText { font-family: "helvetica, sans-serif"; font-size: 12px; text-align: center; }  
-span.footerText { font-family: "helvetica, sans-serif"; font-size: 12px; margin-left: 45px; } 
+span.footerText { font-family: "helvetica, sans-serif"; font-size: 12px; margin-left: 45px; }
 
-span.label { width:40%; display:inline-block; font-size: 12px; font-weight: bold; text-transform:uppercase; color:#444; vertical-align: top}
-span.meta { width: 350px; display:inline-block; font-weight:regular; color:#000;}
-div.data {  font: "helvetica, sans-serif";  font-size: 12px; border-bottom: 1px solid #eeeeee; margin-top: 10px; text-align: justify; padding-top: 10px}
+span.label { width:40%; display: inline-block; font-size: 12px; font-weight: bold; text-transform:uppercase; color:#444; vertical-align: top}
+span.meta { width: 350px; display: inline-block; font-weight:regular; color:#000;}
+div.data {  font: "helvetica, sans-serif";  font-size: 12px; border-bottom: 1px solid #eeeeee; margin-top: 10px; text-align: justify; padding-top: 10px; page-break-inside: avoid}
 div.findingAid.data { border-bottom: 0px; }
-.title { font: "helvetica, sans-serif"; font-size: 18px; height: 25px; text-align: center; font-weight: bold;}
+.title {font: "helvetica, sans-serif"; font-size: 18px; height: 25px; text-align: center; font-weight: bold;}
 .representationList { margin-top:10px; text-align: center; }
 
 .thumbnail { font: "helvetica, sans-serif"; font-size: 11px; border: 1px solid #999; width: 200px; height: 160px; float: left; text-align: center; margin-left: 10px; padding: 5px; overflow: none;}	
 
 .pageBreak { page-break-before: always; }
 .clear { clear: both; line-height: 5px; }
+
+span.summarylabel { width:40%; display: block; font-size: 12px; font-weight: bold; text-transform:uppercase; color:#444; vertical-align: top}

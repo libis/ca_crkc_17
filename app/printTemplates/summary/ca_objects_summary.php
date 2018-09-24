@@ -94,7 +94,6 @@
 			if (!(bool)$t_display->getSetting('show_empty_values')) { continue; }
 			$vs_display_value = "&lt;"._t('not defined')."&gt;";
 		}
-		
 		print '<div class="data"><span class="label">'."{$va_bundle_info['display']} </span><span class='meta'> {$vs_display_value}</span></div>\n";
 	}
 	
